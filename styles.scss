@@ -100,7 +100,68 @@ header {
 main {
   background-color: $white;
   border-radius: 1.5rem 1.5rem 0 0;
-  padding: 1rem;
+  padding: 2rem;
   height: 100vh;
   display: grid;
+}
+
+form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.bill-container {
+  display: grid;
+  gap: 0.5rem;
+
+  img {
+    width: 0.75rem;
+  }
+}
+
+.people-container > label,
+.bill-container label,
+.tip h2 {
+  color: $dark-grayish-cyan;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+input[type='number'] {
+  background-color: $very-light-grayish-cyan;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  color: $very-dark-cyan;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.people-container {
+  img {
+    width: 0.75rem;
+  }
+}
+
+.buttons {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.buttons button {
+  background-color: $very-dark-cyan;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  color: $white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 9rem;
+
+  &:hover {
+    background-color: $strong-cyan;
+  }
 }

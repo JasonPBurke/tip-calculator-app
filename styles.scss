@@ -110,50 +110,68 @@ form {
   gap: 1.5rem;
 }
 
+.people-container,
 .bill-container {
   display: grid;
-  gap: 0.5rem;
+  position: relative;
+  width: 50%;
+
+  label {
+    margin-bottom: 0.25rem;
+  }
 
   img {
     width: 0.75rem;
+    position: absolute;
+    top: 58%;
+    left: 1rem;
   }
 }
 
+.bill-container > label,
 .people-container > label,
-.bill-container label,
 .tip h2 {
   color: $dark-grayish-cyan;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
+}
+
+.people-container {
+  margin-block-end: 2rem;
 }
 
 input[type='number'] {
   background-color: $very-light-grayish-cyan;
   border-radius: 0.25rem;
-  padding: 0.25rem;
+  padding: 0.25rem 1rem;
   color: $very-dark-cyan;
   font-size: 1.5rem;
   font-weight: 700;
   text-align: right;
+  cursor: pointer;
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 }
 
-.people-container {
-  img {
-    width: 0.75rem;
+.tip {
+  h2 {
+    margin-bottom: 1rem;
+    padding-left: 0.25rem;
   }
 }
 
 .buttons {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  justify-items: center;
+
+  justify-content: center;
 }
 
 .buttons button {
   background-color: $very-dark-cyan;
-  border-radius: 0.25rem;
+  border-radius: 0.375rem;
   padding: 0.25rem;
   color: $white;
   font-size: 1.5rem;
@@ -163,5 +181,66 @@ input[type='number'] {
 
   &:hover {
     background-color: $strong-cyan;
+    color: $very-dark-cyan;
   }
+}
+
+input[type='text'] {
+  background-color: $very-light-grayish-cyan;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  color: $very-dark-cyan;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  width: 9rem;
+  cursor: pointer;
+}
+
+.result {
+  background-color: $very-dark-cyan;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+
+  .tip-amount-container,
+  .total-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.tip-amount-text,
+.total-text {
+  color: $white;
+  font-size: 1rem;
+  font-weight: 400;
+
+  :last-child {
+    color: $grayish-cyan;
+    font-size: 0.75rem;
+  }
+}
+
+.tip-amount,
+.total {
+  color: $strong-cyan;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.reset {
+  background-color: $strong-cyan;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  color: $very-dark-cyan;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  margin-block-start: 0.75rem;
 }

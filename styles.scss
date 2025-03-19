@@ -71,6 +71,7 @@ img {
 
 // End Reset
 
+$light-cyan: hsl(173, 61%, 77%);
 $strong-cyan: hsl(172, 67%, 45%);
 $very-dark-cyan: hsl(183, 100%, 15%);
 $dark-grayish-cyan: hsl(186, 14%, 43%);
@@ -149,8 +150,16 @@ input[type='number'] {
   font-weight: 700;
   text-align: right;
   cursor: pointer;
+  caret-color: $strong-cyan;
   &::-webkit-inner-spin-button {
     appearance: none;
+  }
+  &:hover,
+  &:focus {
+    outline: 2px solid $strong-cyan;
+  }
+  &::placeholder {
+    color: $grayish-cyan;
   }
 }
 
@@ -179,22 +188,25 @@ input[type='number'] {
   cursor: pointer;
   width: 9rem;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    background-color: $light-cyan;
+    color: $very-dark-cyan;
+  }
+
+  &.active {
     background-color: $strong-cyan;
     color: $very-dark-cyan;
   }
 }
 
-input[type='text'] {
-  background-color: $very-light-grayish-cyan;
-  border-radius: 0.25rem;
-  padding: 0.25rem;
-  color: $very-dark-cyan;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
+.buttons > .custom-tip-btn {
+  text-align: right;
   width: 9rem;
-  cursor: pointer;
+  &::placeholder {
+    text-align: center;
+    color: $dark-grayish-cyan;
+  }
 }
 
 .result {
@@ -243,4 +255,10 @@ input[type='text'] {
   height: 2.5rem;
   border: none;
   margin-block-start: 0.75rem;
+
+  &:hover,
+  &:focus {
+    background-color: $light-cyan;
+    // color: $very-dark-cyan;
+  }
 }

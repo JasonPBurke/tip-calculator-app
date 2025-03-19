@@ -138,9 +138,16 @@ input[type=number] {
   font-weight: 700;
   text-align: right;
   cursor: pointer;
+  caret-color: hsl(172, 67%, 45%);
 }
 input[type=number]::-webkit-inner-spin-button {
   appearance: none;
+}
+input[type=number]:hover, input[type=number]:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+input[type=number]::placeholder {
+  color: hsl(184, 14%, 56%);
 }
 
 .tip h2 {
@@ -165,21 +172,22 @@ input[type=number]::-webkit-inner-spin-button {
   cursor: pointer;
   width: 9rem;
 }
-.buttons button:hover {
+.buttons button:hover, .buttons button:focus {
+  background-color: hsl(173, 61%, 77%);
+  color: hsl(183, 100%, 15%);
+}
+.buttons button.active {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
 
-input[type=text] {
-  background-color: hsl(189, 41%, 97%);
-  border-radius: 0.25rem;
-  padding: 0.25rem;
-  color: hsl(183, 100%, 15%);
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
+.buttons > .custom-tip-btn {
+  text-align: right;
   width: 9rem;
-  cursor: pointer;
+}
+.buttons > .custom-tip-btn::placeholder {
+  text-align: center;
+  color: hsl(186, 14%, 43%);
 }
 
 .result {
@@ -227,6 +235,9 @@ input[type=text] {
   height: 2.5rem;
   border: none;
   margin-block-start: 0.75rem;
+}
+.reset:hover, .reset:focus {
+  background-color: hsl(173, 61%, 77%);
 }
 
 /*# sourceMappingURL=styles.css.map */

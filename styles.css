@@ -103,7 +103,6 @@ form {
 .bill-container {
   display: grid;
   position: relative;
-  width: 50%;
 }
 .people-container label,
 .bill-container label {
@@ -197,6 +196,9 @@ input[type=number]::placeholder {
   display: grid;
   gap: 1rem;
 }
+.result .tip-amount-container {
+  margin-block-end: 1rem;
+}
 .result .tip-amount-container,
 .result .total-container {
   display: flex;
@@ -238,6 +240,48 @@ input[type=number]::placeholder {
 }
 .reset:hover, .reset:focus {
   background-color: hsl(173, 61%, 77%);
+}
+
+@media screen and (min-width: 48rem) {
+  header {
+    margin-block: 3rem;
+  }
+  main {
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1.5rem;
+    align-content: center;
+    height: auto;
+    max-width: 56rem;
+    gap: 1.5rem;
+    margin-inline: 1rem;
+  }
+  main .form {
+    padding: 1rem;
+    gap: 2.5rem;
+  }
+  .buttons button,
+  .buttons > .custom-tip-btn {
+    width: 7rem;
+  }
+  .custom-tip-btn::placeholder {
+    font-size: 1.375rem;
+  }
+  .bill-container,
+  .people-container {
+    width: 100%;
+    margin-block-end: 0;
+  }
+  .result-container {
+    display: grid;
+    align-items: flex-start;
+  }
+  .tip-amount,
+  .total {
+    font-size: 2.5rem;
+  }
+  .reset {
+    align-self: flex-end;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

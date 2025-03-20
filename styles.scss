@@ -101,7 +101,7 @@ header {
 main {
   background-color: $white;
   border-radius: 1.5rem 1.5rem 0 0;
-  padding: 2rem;
+  padding: 1.45rem;
   height: 100vh;
   display: grid;
 }
@@ -263,7 +263,11 @@ input[type='number'] {
   &:hover,
   &:focus {
     background-color: $light-cyan;
-    // color: $very-dark-cyan;
+  }
+  &:disabled {
+    background-color: hsl(184, 57%, 27%);
+    cursor: not-allowed;
+    color: hsl(183, 100%, 15%, 0.4);
   }
 }
 

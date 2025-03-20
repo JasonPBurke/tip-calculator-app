@@ -89,7 +89,7 @@ header {
 main {
   background-color: hsl(0, 0%, 100%);
   border-radius: 1.5rem 1.5rem 0 0;
-  padding: 2rem;
+  padding: 1.45rem;
   height: 100vh;
   display: grid;
 }
@@ -240,6 +240,11 @@ input[type=number]::placeholder {
 }
 .reset:hover, .reset:focus {
   background-color: hsl(173, 61%, 77%);
+}
+.reset:disabled {
+  background-color: hsl(184, 57%, 27%);
+  cursor: not-allowed;
+  color: hsla(183, 100%, 15%, 0.4);
 }
 
 @media screen and (min-width: 48rem) {
